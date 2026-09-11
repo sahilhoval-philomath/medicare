@@ -1,0 +1,683 @@
+/* Welcome, Good Morning Section */
+
+.welcome-card {
+  margin: 20px;
+  padding: 30px;
+  min-height: 220px;
+  background-image: url("/src/assets/Welcome-header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.welcome-text {
+  color: #064e52;
+}
+
+.greeting {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+}
+
+.welcome-text h1 {
+  margin: 0 0 15px 0;
+  font-size: 36px;
+  font-weight: 600;
+  color: #064e52;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 18px;
+  color: #064e52;
+}
+/*4 Card Sections Information */
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 20px;
+}
+
+.dashboard-card {
+  min-height: 135px;
+  padding: 20px;
+  border-radius: 12px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.patients-card {
+  background-color: #eef8ff;
+}
+
+.appointments-card {
+  background-color: #ecfbf4;
+}
+
+.treatments-card {
+  background-color: #f5efff;
+}
+
+.revenue-card {
+  background-color: #fff4e8;
+}
+
+.card-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.patients-card .card-icon {
+  background-color: #90c8ef;
+}
+
+.appointments-card .card-icon {
+  background-color: #d8f5e7;
+}
+
+.treatments-card .card-icon {
+  background-color: #e9dcff;
+}
+
+.revenue-card .card-icon {
+  background-color: #ffe6cc;
+}
+
+.card-content {
+  min-width: 0;
+}
+
+.card-title {
+  margin: 0 0 8px 0;
+
+  font-size: 14px;
+  color: #10284b;
+}
+
+.dashboard-card h2 {
+  margin: 0 0 5px 0;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  color: #10284b;
+}
+
+.card-growth {
+  margin: 0 0 4px 0;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  color: #0a9b5b;
+}
+
+.dashboard-card span {
+  font-size: 12px;
+  color: #53627a;
+}
+
+/* Appointment Section (Todays Appointments) */
+
+.main-dashboard {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 15px;
+  margin: 20px;
+  align-items: start;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px 12px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #10284b;
+}
+
+.section-header a {
+  font-size: 13px;
+  color: #008cff;
+  text-decoration: none;
+}
+
+.appointments-section,
+.treatment-overview,
+.recent-patients {
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  min-height: 365px;
+  background-color: white;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.appointment {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 60px;
+  border-bottom: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.appointment:last-child {
+  border-bottom: none;
+}
+
+.appointment-time {
+  width: 80px;
+  margin-left: 6px;
+  flex-shrink: 0;
+  font-size: 13px;
+  color: #53627a;
+}
+
+.appointment-dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 20px ;
+  border-radius: 50%;
+  background-color: #2196f3;
+  flex-shrink: 0;
+}
+
+.appointment-dot.green {
+  background-color: #0a9b5b;
+}
+
+.appointment-dot.gray {
+  background-color: #aab3c0;
+}
+
+.appointment-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.appointment-info h3 {
+  margin: 0 0 3px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #10284b;
+}
+
+.appointment-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #53627a;
+}
+
+.status {
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-size: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-right: 5px;
+}
+
+.checked {
+  background-color: #e5f4ff;
+  color: #1689e8;
+}
+
+.consultation {
+  background-color: #e3f8ed;
+  color: #0a9b5b;
+}
+
+.scheduled {
+  background-color: #f1f3f5;
+  color: #53627a;
+}
+
+/* Treatment Overview And Pie Chart */
+.treatment-overview select {
+  padding: 1px 1px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  background-color: white;
+  color: #10284b;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.treatment-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 35px 5px;
+}
+.treatment-overview .section-header {
+  width: 100%;
+}
+
+.donut-chart {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #2196f3 0deg 120deg,
+    #0a9b5b 120deg 189deg,
+    #ff914d 189deg 240deg,
+    #8b5cf6 240deg 300deg,
+    #aab3c0 300deg 360deg
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.donut-center {
+  width: 82px;
+  height: 82px;
+  background-color: white;
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.donut-center h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #10284b;
+}
+
+.donut-center span {
+  font-size: 10px;
+  color: #53627a;
+}
+
+.treatment-list {
+  flex: 1;
+  min-width: 0;
+}
+
+.treatment-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: #10284b;
+}
+
+.treatment-item:last-child {
+  margin-bottom: 0;
+}
+.treatment-item span:nth-child(2) {
+  flex: 1;
+  white-space: nowrap;
+}
+
+.treatment-item strong {
+  font-size: 12px;
+}
+
+.treatment-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.treatment-dot.blue {
+  background-color: #2196f3;
+}
+
+.treatment-dot.green {
+  background-color: #0a9b5b;
+}
+
+.treatment-dot.orange {
+  background-color: #ff914d;
+}
+
+.treatment-dot.purple {
+  background-color: #8b5cf6;
+}
+
+.treatment-dot.gray {
+  background-color: #aab3c0;
+}
+
+
+/* Recent Pages Section */
+.patient {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  gap: 10px;
+  border-bottom: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.patient:last-child {
+  border-bottom: none;
+}
+
+.patient-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5f6f8;
+  color: #0b7d86;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.patient-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.patient-info h3 {
+  margin: 0 0 3px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #10284b;
+}
+
+.patient-info p {
+  margin: 0;
+  font-size: 11px;
+  color: #53627a;
+}
+
+.patient-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.patient-date span {
+  font-size: 10px;
+  color: #53627a;
+  white-space: nowrap;
+}
+
+.patient-status {
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.patient-status.new {
+  background-color: #e3f8ed;
+  color: #0a9b5b;
+}
+
+.patient-status.follow-up {
+  background-color: #e5f4ff;
+  color: #1689e8;
+}
+
+.patient-status.treatment {
+  background-color: #e3f8ed;
+  color: #0a9b5b;
+}
+
+.quick-actions {
+  margin-top: 5px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.quick-actions-header {
+  margin-bottom: 20px;
+}
+
+.quick-actions-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #10284b;
+}
+
+.quick-actions-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.quick-action {
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #10284b;
+  box-sizing: border-box;
+}
+
+.quick-action:nth-child(1) {
+  background-color: #e3f8ed;
+}
+
+.quick-action:nth-child(2) {
+  background-color: #e5f4ff;
+}
+
+.quick-action:nth-child(3) {
+  background-color: #f1e8ff;
+}
+
+.quick-action:nth-child(4) {
+  background-color: #fff0df;
+}
+
+.quick-action img {
+
+  width: 37px;
+  height: 35px;
+  object-fit: contain;
+  margin-bottom: 6px;
+  margin-top: 8px ;
+}
+
+.quick-action p {
+  margin-top: 2px;
+  font-size: 11px;
+  color: #10284b;
+}
+
+.quick-action:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/* Appointment CTA */
+
+.appointment-cta {
+  position: relative;
+  width: 100%;
+  min-height: 167px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 5px
+}
+
+.appointment-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  padding: 25px;
+  margin-left: 40%;
+  margin-top: 5px;
+}
+
+.cta-content h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #064e52;
+}
+
+.cta-content p {
+  margin: 0 0 15px;
+  font-size: 18px;
+  color: #064e52;
+}
+.cta-button {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #006b5f;
+  color: white;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.cta-button:hover {
+  cursor: pointer;
+}
+
+/* Doctor's Notes */
+
+.doctor-notes {
+  margin-top: 5px;
+  height: 172px;
+  padding: 18px;
+  background-color: #f1e8ff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.notes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.notes-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #10284b;
+}
+
+.edit-button,
+.save-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #e5f4ff;
+  color: #0888f1;
+}
+
+.save-button {
+  background-color: #e3f8ed;
+  color: #0a9b5b;
+}
+
+.notes-text {
+  margin: 0;
+  height: 75px;
+  overflow-y: auto;
+  white-space: pre-line;
+
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 500;
+
+  color: #064e52;
+}
+
+.notes-text:hover {
+  color: #006b5f;
+}
+
+.notes-text {
+  padding: 5px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.notes-input {
+  width: 100%;
+  height: 75px;
+  padding: 8px;
+  border: 1px solid #dce2e8;
+  border-radius: 7px;
+  box-sizing: border-box;
+  resize: none;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #53627a;
+  outline: none;
+  overflow-y: auto;
+}
+
+.notes-input:focus {
+  border-color: #0b7d86;
+}
+
+.notes-footer {
+  margin-top: 6px;
+  padding-top: 4px;
+  border-top: 1px solid #eeeeee;
+}
+
+.notes-footer span {
+  font-size: 12px;
+  color: #0b7d86;
+}
